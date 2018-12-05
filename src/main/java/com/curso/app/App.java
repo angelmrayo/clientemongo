@@ -1,7 +1,7 @@
 package com.curso.app;
 
-import com.mongodb.MongoClientURI;
 import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
@@ -23,7 +23,7 @@ public class App
 
         MongoDatabase db = client.getDatabase(uri.getDatabase());
 
-           MongoCollection<Document> pelis = db.getCollection("peliculas");
+        MongoCollection<Document> pelis = db.getCollection("peliculas");
         FindIterable<Document> lista = pelis.find();
         for (Document peli : lista)
         {
